@@ -1,0 +1,39 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class() extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('order_meals', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('order_id')->nullable();
+            $table->foreignId('meal_id')->nullable();
+            $table->integer('quantity')->default(1);
+            $table->unsignedBigInteger('plan_id')->nullable();
+            $table->unsignedBigInteger('membership_id')->nullable();
+
+            $table->decimal('price', 8, 2);
+            // to show this detail is for rward order meal
+            $table->boolean('is_reward_meal')->default(false);
+            $table->timestamps();
+
+            // Example: Add order_status_at_time field
+            // $table->string('order_status_at_time')->nullable();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('order_meals');
+    }
+};

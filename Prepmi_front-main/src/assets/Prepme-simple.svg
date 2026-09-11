@@ -1,0 +1,16 @@
+<!-- Prep Me logo — Prep in green #3AAA70, Me in red #E54B29 -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="400" height="120"
+     viewBox="0 0 400 120"
+     role="img" aria-labelledby="prepmeTitle prepmeDesc">
+  <title id="prepmeTitle">Prep Me logo</title>
+  <desc id="prepmeDesc">The word "Prep" in green #3AAA70 and "Me" in red #E54B29</desc>
+
+  <text x="0" y="78"
+        font-family="Poppins, Arial, Helvetica, sans-serif"
+        font-weight="700"
+        font-size="72"
+        letter-spacing="0.5">
+    <tspan fill="#12411f">Prep</tspan><tspan fill="#ac2728">Me</tspan>
+  </text>
+</svg>
